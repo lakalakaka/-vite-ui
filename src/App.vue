@@ -2,10 +2,13 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue';
+import logoSrc from '@assets/logo.png';
+import IconComponent from '@assets/svg/twitter.svg';
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <img alt="Vue logo" :src="logoSrc" />
+  <IconComponent />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 
