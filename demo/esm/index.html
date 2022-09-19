@@ -1,0 +1,14 @@
+<h1>Demo</h1>
+<div id="app"></div>
+<script type="module">
+    import { createApp } from 'vue/dist/vue.esm-bundler.js';
+    import ViteUI, { SFCButton, JSXButton, MyButton } from '../../dist/vite-ui.esm.js';
+
+    createApp({
+        template: `
+      <SButton/>
+      <JSXButton/>
+      <SFCButton/>
+    `}).use(ViteUI).mount('#app');
+
+</script>

@@ -2,15 +2,17 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
+    jest: true,
     'vue/setup-compiler-macros': true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    'standard',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:vue/vue3-essential'
+    // 'standard'
+    // 'plugin:@typescript-eslint/recommended',
     // 1. 接入 prettier 的规则
-    'prettier',
-    'plugin:prettier/recommended'
+    // 'prettier',
+    // 'plugin:prettier/recommended'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -26,7 +28,10 @@ module.exports = {
   rules: {
     // 3. 注意要加上这一句，开启 prettier 自动修复的功能
     'prettier/prettier': 'error',
-    quotes: ['error', 'single'],
-    semi: ['error', 'always']
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    // quotes: ['error', 'single'],
+    // semi: ['error', 'always'],
+    // 'linebreak-style': [0, 'error', 'windows']
   }
 };
