@@ -50,13 +50,15 @@ export default defineConfig({
   ],
   build: {
     rollupOptions,
-    minify: false,
+    sourcemap: true, // 输出单独 source文件
+    minify: 'terser',
+    cssCodeSplit: true,
     lib: {
       entry: './src/entry.ts',
       name: 'viteUI',
       fileName: 'vite-ui',
       // 导出模块格式
-      formats: ['es', 'umd', 'iife']
+      formats: ['esm', 'umd', 'iife']
     },
     // 8 KB
     assetsInlineLimit: 8 * 1024
