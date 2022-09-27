@@ -1,4 +1,3 @@
-// import { createApp } from 'vue/dist/vue.esm-browser';
 import { createApp } from 'vue';
 import ViteUI from './entry';
 import 'uno.css';
